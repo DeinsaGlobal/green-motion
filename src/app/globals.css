@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --accent-green: #10b981;
-  --accent-green-dark: #059669;
+  --background: #000000;
+  --foreground: #ffffff;
+  --card-bg: #00764e;
+  --card-border: #47ba41;
+  --primary-green: #00764e;
+  --bright-green: #47ba41;
+  --teal: #289b8f;
+  --light-teal: #7bcfbf;
+  --light-bg: #e8f9f6;
+  --luxury-gold: #d4af37;
+  --dark-green: #00764e;
 }
 
 @theme inline {
@@ -15,11 +22,166 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #00764e 0%, #000000 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Efectos Modernos GMOTION */
+.modern-text {
+  text-shadow: 
+    0 0 3px rgba(0, 118, 78, 0.3),
+    0 0 6px rgba(0, 118, 78, 0.1);
+}
+
+.green-text {
+  text-shadow: 
+    0 0 4px rgba(71, 186, 65, 0.4),
+    0 0 8px rgba(71, 186, 65, 0.2);
+}
+
+.modern-border {
+  box-shadow: 
+    0 0 6px rgba(0, 118, 78, 0.2),
+    0 0 12px rgba(0, 118, 78, 0.1),
+    inset 0 0 6px rgba(0, 118, 78, 0.05);
+}
+
+.modern-glow {
+  box-shadow: 
+    0 0 8px rgba(0, 118, 78, 0.3),
+    0 0 16px rgba(0, 118, 78, 0.15),
+    0 0 24px rgba(0, 118, 78, 0.05);
+}
+
+/* Mejor legibilidad en hero */
+.hero-text {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.bright-glow {
+  box-shadow: 
+    0 0 8px rgba(71, 186, 65, 0.3),
+    0 0 16px rgba(71, 186, 65, 0.15),
+    0 0 24px rgba(71, 186, 65, 0.05);
+}
+
+.premium-shadow {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Botones Modernos GMOTION */
+.modern-button {
+  background: linear-gradient(135deg, #00764e 0%, #47ba41 100%);
+  border: 1px solid rgba(0, 118, 78, 0.3);
+  transition: all 0.3s ease;
+}
+
+.modern-button:hover {
+  background: linear-gradient(135deg, #47ba41 0%, #289b8f 100%);
+  transform: translateY(-2px);
+}
+
+.modern-outline {
+  background: transparent;
+  border: 2px solid #00764e;
+  color: #00764e;
+  transition: all 0.3s ease;
+}
+
+.modern-outline:hover {
+  background: #00764e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Animaciones */
+@keyframes pulse-neon {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.3);
+  }
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    filter: brightness(0) contrast(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: brightness(0.3) contrast(0.5);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) contrast(1);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 1.2s ease-out;
+}
+
+/* Estilos para logos de marcas */
+.brand-logo {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.brand-logo:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 5px 15px rgba(71, 186, 65, 0.3));
+}
+
+/* Ocultar scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
