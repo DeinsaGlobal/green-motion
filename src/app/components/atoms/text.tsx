@@ -1,4 +1,4 @@
-// components/atoms/Text.tsx
+
 import React from 'react';
 
 interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
