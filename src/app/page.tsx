@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -173,34 +174,49 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black animate-reveal">
       {/* Navbar de lujo premium */}
-      <nav className="fixed top-0 w-full bg-transparent backdrop-blur-md z-50 border-b border-[#00764e]">
-        <div className="">
-          <div className="grid grid-cols-3 items-center h-20 w-full">
-            <div className="flex justify-start">
-              <Link href="/" className="flex items-center gap-3">
-                <img 
-                  src="/Imagenes/Logo.png" 
-                  alt="Green Motion" 
-                  className="h-12 w-auto object-contain drop-shadow-md"
-                />
-              </Link>
-            </div>
-            
-            <div className="hidden md:flex gap-8 items-center justify-center">
-              <span className="text-[#D1D5DB]">Inicio</span>
-              <span className="text-[#D1D5DB]">Marcas</span>
-              <span className="text-[#D1D5DB]">Nosotros</span>
-              <span className="text-[#D1D5DB]">Contacto</span>
-            </div>
-            
-            <div className="flex justify-end">
-              <button className="modern-button text-white px-6 py-3 rounded-lg font-semibold modern-glow">
-                Cotizar
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+<nav className="fixed top-0 w-full bg-transparent backdrop-blur-md z-50 border-b border-[#00764e]">
+  <div className="">
+    <div className="grid grid-cols-3 items-center h-20 w-full">
+      {/* Logo */}
+      <div className="flex justify-start">
+        <Link href="/" className="flex items-center gap-3">
+          <img 
+            src="/Imagenes/Logo.png" 
+            alt="Green Motion" 
+            className="h-12 w-auto object-contain drop-shadow-md"
+          />
+        </Link>
+      </div>
+
+      {/* Enlaces de navegación */}
+      <div className="hidden md:flex gap-8 items-center justify-center">
+        <Link href="/" className="text-[#D1D5DB] hover:text-[#47ba41] transition-colors">
+          Inicio
+        </Link>
+        <Link href="/marcas" className="text-[#D1D5DB] hover:text-[#47ba41] transition-colors">
+          Marcas
+        </Link>
+        <Link href="/nosotros" className="text-[#D1D5DB] hover:text-[#47ba41] transition-colors">
+          Nosotros
+        </Link>
+        <Link href="/contacto" className="text-[#D1D5DB] hover:text-[#47ba41] transition-colors">
+          Contacto
+        </Link>
+      </div>
+
+      {/* Botón Cotizar redirige a /nosotros */}
+      <div className="flex justify-end">
+        <Link 
+          href="/nosotros"
+          className="modern-button text-white px-6 py-3 rounded-lg font-semibold modern-glow hover:scale-105 transition-transform"
+        >
+          Cotizar
+        </Link>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
       {/* Hero Section con imagen de carro */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
