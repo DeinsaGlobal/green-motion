@@ -161,10 +161,12 @@ export default function Home() {
     return (
       <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div className="animate-pulse-neon">
-          <img 
+          <Image 
+            width={1058}
+            height={236}
             src="/Imagenes/Logo.png" 
             alt="Green Motion" 
-            className="w-32 h-32 object-contain drop-shadow-2xl"
+            className="w-32  object-contain drop-shadow-2xl"
           />
         </div>
       </div>
@@ -174,12 +176,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black animate-reveal">
       {/* Navbar de lujo premium */}
-      <nav className="fixed top-0 w-full bg-transparent backdrop-blur-md z-50 border-b border-[#00764e]">
+      <nav className="fixed flex justify-center top-0 w-full bg-transparent backdrop-blur-md z-50 border-b border-[#00764e]">
         <div className="">
           <div className="grid grid-cols-3 items-center h-20 w-full">
-            <div className="flex justify-start">
+            <div className="flex justify-start md:mr-50">
               <Link href="/" className="flex items-center gap-3">
-                <img 
+                <Image 
+                  width={1058}
+                  height={236}
                   src="/Imagenes/Logo.png" 
                   alt="Green Motion" 
                   className="h-12 w-auto object-contain drop-shadow-md"
@@ -188,16 +192,18 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex gap-8 items-center justify-center">
-              <span className="text-[#D1D5DB]">Inicio</span>
-              <span className="text-[#D1D5DB]">Marcas</span>
-              <span className="text-[#D1D5DB]">Nosotros</span>
-              <span className="text-[#D1D5DB]">Contacto</span>
+              <Link href="/" className="text-[#D1D5DB] hover:text-white transition">Inicio</Link>
+              <Link href="/marcas" className="text-[#D1D5DB] hover:text-white transition">Marcas</Link>
+              <Link href="/nosotros" className="text-white transition">Nosotros</Link>
+              <Link href="/contacto" className="text-[#D1D5DB] hover:text-white transition">Contacto</Link>
             </div>
             
             <div className="flex justify-end">
-              <button className="modern-button text-white px-6 py-3 rounded-lg font-semibold modern-glow">
+              <Link href={"/contacto"}>
+              <button className="modern-button text-white px-6 py-3 rounded-lg font-semibold modern-glow cursor-pointer">
                 Cotizar
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -208,9 +214,11 @@ export default function Home() {
         {/* Imagen de fondo */}
         <div className="absolute inset-0">
           <Image 
+            height={3128}
+            width={5568}
             src="/Imagenes/Fondo.JPG" 
             alt="Fondo Green Motion" 
-            fill
+            // fill
             className="object-cover"
             priority
             quality={85}
@@ -235,12 +243,17 @@ export default function Home() {
             <span className="text-[#47ba41] font-medium">Lujo, potencia y sostenibilidad</span> en un solo lugar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="modern-button text-white px-8 py-4 rounded-lg font-bold text-lg modern-glow">
+            <Link href={"#vehiclesSection"}>
+            <button className="modern-button text-white px-8 py-4 rounded-lg font-bold text-lg modern-glow cursor-pointer" >
               Explorar Modelos
             </button>
-            <button className="modern-outline px-8 py-4 rounded-lg font-semibold text-lg">
+            </Link>
+            <Link href={"/contacto"}>
+            <button className="modern-outline px-8 py-4 rounded-lg font-semibold text-lg cursor-pointer">
               Agendar Test Drive
             </button>
+            </Link>
+            
           </div>
         </div>
 
@@ -269,10 +282,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("tesla")}
               title="Tesla"
             >
-              <img 
+              <Image 
+                width={494}
+                height={505}
                 src="/Imagenes/Logos/logo-tesla.png" 
                 alt="Tesla" 
-                className="h-16 w-auto object-contain"
+                className="h-16 w-auto object-contain cursor-pointer"
               />
             </button>
 
@@ -286,10 +301,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("ford")}
               title="Ford"
             >
-              <img 
+              <Image 
+                height={300}
+                width={833}
                 src="/Imagenes/Logos/logo-ford.png" 
                 alt="Ford" 
-                className="h-16 w-auto object-contain"
+                className="h-16 w-auto object-contain cursor-pointer"
               />
             </button>
 
@@ -303,10 +320,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("audi")}
               title="Audi"
             >
-              <img 
+              <Image 
+                width={666}
+                height={375}
                 src="/Imagenes/Logos/logo-audi.png" 
                 alt="Audi" 
-                className="h-16 w-auto object-contain brightness-0 invert"
+                className="h-16 w-auto object-contain brightness-0 invert cursor-pointer"
               />
             </button>
 
@@ -320,10 +339,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("bmw")}
               title="BMW"
             >
-              <img 
+              <Image 
+                width={612}
+                height={408}
                 src="/Imagenes/Logos/logo-bmw.png" 
                 alt="BMW" 
-                className="h-16 w-auto object-contain"
+                className="h-21 w-auto object-contain cursor-pointer"
               />
             </button>
 
@@ -337,10 +358,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("honda")}
               title="Honda"
             >
-              <img 
+              <Image 
+                width={662}
+                height={377}
                 src="/Imagenes/Logos/logo-honda.png" 
                 alt="Honda" 
-                className="h-16 w-auto object-contain brightness-0 invert"
+                className="h-18 w-auto object-contain brightness-0 invert cursor-pointer"
               />
             </button>
 
@@ -354,10 +377,12 @@ export default function Home() {
               onClick={() => setSelectedBrand("byd")}
               title="BYD"
             >
-              <img 
+              <Image 
+                width={642}
+                height={388}
                 src="/Imagenes/Logos/logo-byd.png" 
                 alt="BYD" 
-                className="h-16 w-auto object-contain"
+                className="h-16 w-auto object-contain cursor-pointer"
               />
             </button>
 
@@ -371,18 +396,20 @@ export default function Home() {
               onClick={() => setSelectedBrand("kia")}
               title="KIA"
             >
-              <img 
+              <Image 
+                width={706}
+                height={354}
                 src="/Imagenes/Logos/logo-kia.png" 
                 alt="KIA" 
-                className="h-16 w-auto object-contain"
+                className="h-16 w-auto object-contain cursor-pointer"
               />
             </button>
           </div>
           
           {/* Segunda fila con botón Todos */}
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6" id="vehiclesSection">
             <button 
-              className={`transition-all duration-300 rounded-lg px-6 py-2 text-sm font-semibold ${selectedBrand === "all" ? "bg-[#47ba41] text-white" : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white"}`}
+              className={`transition-all duration-300 rounded-lg px-6 py-2 text-sm font-semibold cursor-pointer ${selectedBrand === "all" ? "bg-[#47ba41] text-white" : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white"}`}
               onClick={() => setSelectedBrand("all")}
             >
               Ver Todos los Vehículos
@@ -433,7 +460,7 @@ export default function Home() {
             )}
 
             {/* Carrusel de vehículos */}
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" >
               <div 
                 className="flex gap-8 transition-transform duration-500 ease-in-out"
                 style={{ 
@@ -446,9 +473,11 @@ export default function Home() {
                   <div key={vehicle.id} className="bg-black/80 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-black/90 transition-all duration-300 group shadow-lg hover:shadow-xl hover:shadow-[#47ba41]/20 flex flex-col flex-shrink-0" style={{ width: `calc((100% - ${(maxVisible - 1) * 32}px) / ${maxVisible})` }}>
                     <div className="relative h-72 overflow-hidden">
                       <Image 
+                        width={1400}
+                        height={786}
                         src={vehicle.image} 
                         alt={`${vehicle.brand} ${vehicle.name}`}
-                        fill
+                        // fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         quality={80}
@@ -495,39 +524,23 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-black text-gray-300 py-12 border-t border-[#00764e]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
             {/* Columna 1 - Sobre Nosotros */}
             <div>
               <h3 className="text-white text-lg font-bold mb-4">Green Motion</h3>
               <p className="text-sm text-gray-400 mb-4">
                 Tu concesionario de vehículos eléctricos de confianza. Comprometidos con un futuro sostenible.
               </p>
-              <img 
+              <Image 
+                width={1058}
+                height={236}
                 src="/Imagenes/Logo.png" 
                 alt="Green Motion Logo" 
                 className="h-12 w-auto object-contain"
               />
             </div>
-
-            {/* Columna 2 - Enlaces Rápidos */}
-            <div>
-              <h3 className="text-white text-lg font-bold mb-4">Enlaces Rápidos</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-sm hover:text-[#47ba41] transition-colors">Inicio</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#47ba41] transition-colors">Marcas</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#47ba41] transition-colors">Nosotros</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#47ba41] transition-colors">Contacto</a>
-                </li>
-              </ul>
-            </div>
+         
 
             {/* Columna 3 - Contacto */}
             <div>
@@ -590,17 +603,11 @@ export default function Home() {
 
           {/* Copyright */}
           <div className="text-center text-sm text-gray-500">
-            <p>&copy; 2024 Green Motion. Todos los derechos reservados.</p>
-            <p className="mt-2">
-              <a href="#" className="hover:text-[#47ba41] transition-colors">Política de Privacidad</a>
-              {" | "}
-              <a href="#" className="hover:text-[#47ba41] transition-colors">Términos y Condiciones</a>
-            </p>
+            <p>&copy; 2025 Green Motion. Todos los derechos reservados.</p>
+        
           </div>
         </div>
       </footer>
-
-      {/* Fin: solo pantalla principal */}
     </div>
   );
 }
