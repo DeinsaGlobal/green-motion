@@ -16,7 +16,7 @@ const brands = [
     description: "Tradición americana en la era eléctrica",
     models: ["Mustang Mach-E", "F-150 Lightning", "E-Transit"],
     href: "/marcas/ford",
-    logo: "https://logos-world.net/wp-content/uploads/2021/02/Ford-Logo.png",
+    logo: "https://logos-world.net/wp-content/uploads/2021/02/Ford-Logo.png", //cambiar a blanco y negro https://www.citypng.com/public/uploads/preview/ford-white-logo-hd-png-701751694714008czcyqdalxp.png
     featured: true
   },
   {
