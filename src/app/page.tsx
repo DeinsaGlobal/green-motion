@@ -130,8 +130,8 @@ export default function Home() {
     : vehicles.filter(v => v.brand.toLowerCase() === selectedBrand);  // Marca específica
 
   const maxVisible = 3;
-  const totalPages = filteredVehicles.length;
-  const currentVehicles = filteredVehicles.slice(currentIndex, currentIndex + maxVisible);
+  // const totalPages = filteredVehicles.length;
+  // const currentVehicles = filteredVehicles.slice(currentIndex, currentIndex + maxVisible);
 
   const nextSlide = () => {
     const maxIndex = Math.max(0, filteredVehicles.length - maxVisible);
