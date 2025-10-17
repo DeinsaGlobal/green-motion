@@ -71,6 +71,44 @@ export const brands: Brand[] = [
 ];
 
 export const cars: Car[] = [
+//Ford
+
+{
+  id: "ford-f150-lightning",
+  brandId: "ford",
+  brand: "Ford",
+  model: "F-150 Lightning",
+  year: 2024,
+  price: "$55,974",
+  range: "370 km",
+  acceleration: "0-100 km/h en 4.4s",
+  topSpeed: "180 km/h",
+  battery: "131 kWh",
+  charging: "150 kW DC Fast Charging",
+  image: "/Imagenes/Carros/Ford/Ford-1.jpg",
+  gallery: [
+    "/Imagenes/Carros/Ford/Ford-1.jpg",
+    "/Imagenes/Carros/Ford/Ford-2.jpg",
+    "/Imagenes/Carros/Ford/Ford-3.jpg"
+  ],
+  description: "La pickup eléctrica más poderosa de Ford con capacidad de trabajo profesional.",
+  features: [
+    "Mega Power Frunk",
+    "Pro Power Onboard",
+    "Ford Co-Pilot360",
+    "SYNC 4A",
+    "Tracción 4x4 eléctrica",
+    "Remolque hasta 4,500 kg"
+  ],
+  specs: {
+    power: "563 CV",
+    torque: "1,050 Nm",
+    seats: 5,
+    cargo: "Frunk 400 L",
+    weight: "3,000 kg",
+    dimensions: "5.91 x 2.03 x 1.98 m"
+  }
+},
   // Audi
   {
     id: "audi-e-tron-gt",
@@ -84,11 +122,11 @@ export const cars: Car[] = [
     topSpeed: "245 km/h",
     battery: "93.4 kWh",
     charging: "270 kW DC Fast Charging",
-    image: "/Imagenes/Carros/Audi/Audi-1.JPG",
+    image: "/Imagenes/Carros/Audi/Audi-1.jpg",
     gallery: [
-      "/Imagenes/Carros/Audi/Audi-1.JPG",
-      "/Imagenes/Carros/Audi/Audi-2.JPG",
-      "/Imagenes/Carros/Audi/Audi-3.JPG"
+      "/Imagenes/Carros/Audi/Audi-1.jpg",
+      "/Imagenes/Carros/Audi/Audi-2.jpg",
+      "/Imagenes/Carros/Audi/Audi-3.jpg"
     ],
     description: "El Audi e-tron GT combina el diseño deportivo característico de Audi con la tecnología eléctrica más avanzada. Con su carrocería aerodinámica y su potente motor eléctrico, ofrece una experiencia de conducción emocionante sin comprometer la sostenibilidad.",
     features: [
@@ -120,10 +158,10 @@ export const cars: Car[] = [
     topSpeed: "180 km/h",
     battery: "82 kWh",
     charging: "135 kW DC Fast Charging",
-    image: "/Imagenes/Carros/Audi/Audi-2.JPG",
+    image: "/Imagenes/Carros/Audi/Audi-2.jpg",
     gallery: [
-      "/Imagenes/Carros/Audi/Audi-2.JPG",
-      "/Imagenes/Carros/Audi/Audi-3.JPG"
+      "/Imagenes/Carros/Audi/Audi-2.jpg",
+      "/Imagenes/Carros/Audi/Audi-3.jpg"
     ],
     description: "SUV compacto premium totalmente eléctrico con espacio versátil y tecnología avanzada.",
     features: [
@@ -227,11 +265,11 @@ export const cars: Car[] = [
     topSpeed: "160 km/h",
     battery: "68.8 kWh",
     charging: "78 kW DC Fast Charging",
-    image: "/Imagenes/Carros/Honda/Honda-1.JPG",
+    image: "/Imagenes/Carros/Honda/Honda-1.jpg",
     gallery: [
-      "/Imagenes/Carros/Honda/Honda-1.JPG",
-      "/Imagenes/Carros/Honda/Honda-2.JPG",
-      "/Imagenes/Carros/Honda/Honda-3.JPG"
+      "/Imagenes/Carros/Honda/Honda-1.jpg",
+      "/Imagenes/Carros/Honda/Honda-2.jpg",
+      "/Imagenes/Carros/Honda/Honda-3.jpg"
     ],
     description: "El Honda e:Ny1 es un SUV eléctrico que combina el legendario espíritu de Honda con tecnología de vanguardia. Diseñado para la ciudad moderna, ofrece eficiencia, confort y tecnología avanzada.",
     features: [
@@ -265,10 +303,10 @@ export const cars: Car[] = [
     topSpeed: "225 km/h",
     battery: "83.9 kWh",
     charging: "205 kW DC Fast Charging",
-    image: "/Imagenes/Carros/BMW/BMW-1.JPG",
+    image: "/Imagenes/Carros/BMW/BMW-1.jpg",
     gallery: [
-      "/Imagenes/Carros/BMW/BMW-1.JPG",
-      "/Imagenes/Carros/BMW/BMW-2.JPG"
+      "/Imagenes/Carros/BMW/BMW-1.jpg",
+      "/Imagenes/Carros/BMW/BMW-2.jpg"
     ],
     description: "El BMW i4 M50 es un Gran Coupé totalmente eléctrico que ofrece el rendimiento M característico de BMW con cero emisiones. Combina lujo, tecnología y deportividad en un paquete elegante.",
     features: [
@@ -300,10 +338,10 @@ export const cars: Car[] = [
     topSpeed: "200 km/h",
     battery: "111.5 kWh",
     charging: "200 kW DC Fast Charging",
-    image: "/Imagenes/Carros/BMW/BMW-2.JPG",
+    image: "/Imagenes/Carros/BMW/BMW-2.jpg",
     gallery: [
-      "/Imagenes/Carros/BMW/BMW-2.JPG",
-      "/Imagenes/Carros/BMW/BMW-1.JPG"
+      "/Imagenes/Carros/BMW/BMW-2.jpg",
+      "/Imagenes/Carros/BMW/BMW-1.jpg"
     ],
     description: "SUV eléctrico insignia de BMW con tecnología y lujo de vanguardia.",
     features: [
@@ -337,11 +375,11 @@ export const cars: Car[] = [
     topSpeed: "260 km/h",
     battery: "77.4 kWh",
     charging: "240 kW DC Fast Charging",
-    image: "/Imagenes/Carros/KIA/KIA-1.JPG",
+    image: "/Imagenes/Carros/KIA/KIA-1.jpg",
     gallery: [
-      "/Imagenes/Carros/KIA/KIA-1.JPG",
-      "/Imagenes/Carros/KIA/KIA-2.JPG",
-      "/Imagenes/Carros/KIA/KIA-3.JPG"
+      "/Imagenes/Carros/KIA/KIA-1.jpg",
+      "/Imagenes/Carros/KIA/KIA-2.jpg",
+      "/Imagenes/Carros/KIA/KIA-3.jpg"
     ],
     description: "El KIA EV6 GT es un crossover eléctrico de alto rendimiento que redefine la movilidad sostenible. Con tecnología de carga ultra rápida y diseño futurista, el EV6 GT ofrece 585 CV de potencia pura.",
     features: [
@@ -373,11 +411,11 @@ export const cars: Car[] = [
     topSpeed: "200 km/h",
     battery: "99.8 kWh",
     charging: "240 kW DC Fast Charging",
-    image: "/Imagenes/Carros/KIA/KIA-2.JPG",
+    image: "/Imagenes/Carros/KIA/KIA-2.jpg",
     gallery: [
-      "/Imagenes/Carros/KIA/KIA-2.JPG",
-      "/Imagenes/Carros/KIA/KIA-3.JPG",
-      "/Imagenes/Carros/KIA/KIA-1.JPG"
+      "/Imagenes/Carros/KIA/KIA-2.jpg",
+      "/Imagenes/Carros/KIA/KIA-3.jpg",
+      "/Imagenes/Carros/KIA/KIA-1.jpg"
     ],
     description: "SUV eléctrico de tres filas con espacio premium y tecnología avanzada.",
     features: [
